@@ -50,7 +50,7 @@ public class MyWishlistsPage {
 	public void clickDeleteWishlist() {
 		this.getDeleteWishlist().click();
 	}
-	public void assertWishlistIsDeleted(String deleted) {
+	public void assertWishlistIsDeleted() {
 		try{
 			 driver.findElements(By.id("wishlist_28695"));
 			 System.out.println("Wishlist is deleted");
@@ -59,5 +59,8 @@ public class MyWishlistsPage {
 			 System.out.println("Wishlist is not deleted");
 			}
 
+	}
+	public void acceptChromePopUp() {
+		driver.switchTo().alert().accept();
 	}
 }
